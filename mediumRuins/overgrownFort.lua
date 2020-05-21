@@ -37,7 +37,7 @@ return function(center, surface)
     ce{name = "stone-wall", position = {center.x + (-6.0), center.y + (-1.0)}, force = fN}
     ce{name = "stone-wall", position = {center.x + (-1.0), center.y + (0.0)}, force = fN}
     local chest = ce{name = "wooden-chest", position = {center.x + (0.0), center.y + (-1.0)}, force = fN}
-    if chest then
+    if chest and chest.valid then
       chest.insert{name = "iron-plate", count = math.random(10, 200)}
       chest.insert{name = "copper-plate", count = math.random(10, 200)}
     end
@@ -52,7 +52,7 @@ return function(center, surface)
     ce{name = "stone-wall", position = {center.x + (-6.0), center.y + (2.0)}, force = fN}
     ce{name = "tree-05", position = {center.x + (-1.5), center.y + (1.5)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (1.5), center.y + (1.5)}, direction = direct.east, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 5}
     end
     ce{name = "stone-wall", position = {center.x + (0.0), center.y + (2.0)}, force = fN}

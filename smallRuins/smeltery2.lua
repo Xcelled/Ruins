@@ -12,7 +12,7 @@ return function(center, surface) --smeltery
     ce{name="small-electric-pole", position={center.x + (3.0), center.y + (4.0)}, force = fN}
     ce{name="inserter", position={center.x + (-3.0), center.y + (-2.0)}, force = fN}
     local e = ce{name="wooden-chest", position = {center.x + (-3.0), center.y + (-3.0)}, force = fN}
-    if e then
+    if e and e.valid then
       e.insert{name = "iron-plate", count = math.random(1, 50)}
     end
     ce{name="inserter", position={center.x + (-1.0), center.y + (-1.0)}, force = fN}

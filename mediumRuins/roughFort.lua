@@ -20,7 +20,7 @@ return function(center, surface)
     ce{name = "tree-05", position = {center.x + (-5.5), center.y + (-2.5)}, force = fN}
     ce{name = "medium-electric-pole", position = {center.x + (-4.0), center.y + (-4.0)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (2.5), center.y + (-2.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "piercing-rounds-magazine", count = 5}
     end
     ce{name = "tree-05", position = {center.x + (5.5), center.y + (-3.5)}, force = fN}
@@ -38,7 +38,7 @@ return function(center, surface)
     ce{name = "tree-05", position = {center.x + (5.5), center.y + (2.5)}, force = fN}
     ce{name = "tree-05", position = {center.x + (-5.5), center.y + (5.5)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (-2.5), center.y + (4.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "piercing-rounds-magazine", count = 5}
     end
     ce{name = "land-mine", position = {center.x + (4.86328125), center.y + (4.16796875)}, force = game.forces.enemy}

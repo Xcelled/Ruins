@@ -40,11 +40,11 @@ return function(center, surface) --destroyed fort
     ce{name = "stone-wall", position = {center.x + (-9.0), center.y + (3.0)}, force = fN}
     ce{name = "stone-wall", position = {center.x + (-9.0), center.y + (2.0)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (-7.5), center.y + (2.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     local e = ce{name = "gun-turret", position = {center.x + (7.5), center.y + (2.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     ce{name = "stone-wall", position = {center.x + (9.0), center.y + (3.0)}, force = fN}

@@ -11,11 +11,11 @@ return function(center, surface) -- small mining
     ce{name="transport-belt", position={center.x + (-2.0), center.y + (1.0)}, direction = direct.west, force = fN}
     ce{name="transport-belt", position={center.x + (-3.0), center.y + (1.0)}, direction = direct.west, force = fN}
     local e = ce{name="transport-belt", position={center.x + (1.0), center.y + (1.0)}, direction = direct.west, force = fN}
-    if e then
+    if e and e.valid then
       e.damage(15,"neutral","physical")
     end
     local e = ce{name="transport-belt", position={center.x + (2.0), center.y + (1.0)}, direction = direct.west, force = fN}
-    if e then
+    if e and e.valid then
       e.damage(34,"neutral","physical")
     end
 end

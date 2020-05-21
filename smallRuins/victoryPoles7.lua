@@ -6,7 +6,7 @@ return function(center, surface) --victory poles
     end
     local fN = game.forces.neutral
     local e = ce{name = "small-electric-pole", position = {center.x + (0.0), center.y + (-1.0)}, force = fN}
-    if e then
+    if e and e.valid then
       e.damage(26,"neutral","physical")
     end
 end

@@ -9,7 +9,7 @@ return function(center, surface) --section of wall with gate
 
     ce{name = "gate", position = {center.x + 0.5, center.y-0.5}, force = fN}
     local e = ce{name = "gate", position = {center.x + 0.5, center.y + 0.5}, force = fN}
-    if e then
+    if e and e.valid then
       e.damage(115,"neutral","physical")
     end
 

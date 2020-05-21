@@ -8,7 +8,7 @@ return function(center, surface) --random walls
     ce{name = "stone-wall", position = {center.x-2.5, center.y-2.5}, force = fN}
     ce{name = "stone-wall", position = {center.x + 0.5, center.y-2.5}, force = fN}
     local e = ce{name = "stone-wall", position = {center.x-1.5, center.y-0.5}, force = fN}
-    if e then
+    if e and e.valid then
       e.damage(12,"neutral","physical")
     end
     ce{name = "stone-wall", position = {center.x + 2.5, center.y-0.5}, force = fN}

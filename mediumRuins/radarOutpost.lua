@@ -25,7 +25,7 @@ return function(center, surface)
     ce{name = "stone-wall", position = {center.x + (-6.0), center.y + (0.0)}, force = fN}
     ce{name = "stone-wall", position = {center.x + (-6.0), center.y + (1.0)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (-3.5), center.y + (0.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 5}
     end
     ce{name = "medium-electric-pole", position = {center.x + (-2.0), center.y + (0.0)}, force = fN}

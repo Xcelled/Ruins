@@ -30,7 +30,7 @@ return function(center, surface) --destroyed enemy fort
     ce{name = "stone-wall", position = {center.x + (15.0), center.y + (-15.0)}, force = fN}
     ce{name = "stone-wall", position = {center.x + (-16.0), center.y + (-14.0)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (-12.5), center.y + (-12.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     ce{name = "fast-inserter", position = {center.x + (-11.0), center.y + (-13.0)}, direction = direct.west, force = fN}
@@ -50,7 +50,7 @@ return function(center, surface) --destroyed enemy fort
     ce{name = "transport-belt", position = {center.x + (8.0), center.y + (-13.0)}, direction = direct.east, force = fN}
     ce{name = "fast-inserter", position = {center.x + (10.0), center.y + (-13.0)}, direction = direct.west, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (11.5), center.y + (-12.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     ce{name = "stone-wall", position = {center.x + (15.0), center.y + (-14.0)}, force = fN}
@@ -161,7 +161,7 @@ return function(center, surface) --destroyed enemy fort
     ce{name = "stone-wall", position = {center.x + (15.0), center.y + (11.0)}, force = fN}
     ce{name = "stone-wall", position = {center.x + (-16.0), center.y + (13.0)}, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (-11.5), center.y + (12.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     ce{name = "transport-belt", position = {center.x + (-7.0), center.y + (13.0)}, direction = direct.west, force = fN}
@@ -181,7 +181,7 @@ return function(center, surface) --destroyed enemy fort
     ce{name = "transport-belt", position = {center.x + (8.0), center.y + (13.0)}, direction = direct.west, force = fN}
     ce{name = "fast-inserter", position = {center.x + (10.0), center.y + (13.0)}, direction = direct.east, force = fN}
     local e = ce{name = "gun-turret", position = {center.x + (11.5), center.y + (12.5)}, force = game.forces.enemy}
-    if e then
+    if e and e.valid then
       e.insert{name = "firearm-magazine", count = 2}
     end
     ce{name = "stone-wall", position = {center.x + (15.0), center.y + (12.0)}, force = fN}
